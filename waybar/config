@@ -1,0 +1,96 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "spacing": 0,
+  "margin-top": 10,
+  "margin-bottom": 10,
+  "margin-left": 0,
+  "margin-right": 0,
+  "modules-left": [
+    "hyprland/workspaces",
+    "sway/workspaces"
+  ],
+  "modules-center": [
+    "custom/applauncher"
+  ],
+  "modules-right": [
+    "network",
+    "bluetooth",
+    "battery",
+    "pulseaudio",
+    "tray",
+    "clock"
+  ],
+  "style": "~/.config/waybar/style.css",
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": false,
+    "tooltip": false
+  },
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": false,
+    "tooltip": false
+  },
+  "custom/applauncher": {
+    "format": "〇",
+    "on-click": "pgrep wofi >/dev/null 2>&1 && killall wofi || wofi --show drun --location=top -y 15",
+    "tooltip": false
+  },
+  "tray": {
+    "spacing": 10,
+    "tooltip": false
+  },
+  "clock": {
+    "format": "󰅐  {:%H:%M}",
+    "tooltip": false
+  },
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": "    {essid} ({signalStrength}%)",
+    "format-ethernet": "    ({signalStrength}%)",
+    "format-disconnected": "󰤮    No Network",
+    "interval": 5,
+    "tooltip": false,
+    "on-click": "~/scripts/custom_wifi_gui.py"
+  },
+  "pulseaudio": {
+    "scroll-step": 5,
+    "max-volume": 150,
+    "format": "{icon}   {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-icons": [
+      "",
+      "",
+      " "
+    ],
+    "nospacing": 1,
+    "format-muted": " ",
+    "on-click": "pavucontrol",
+    "tooltip": false
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}  {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": "󰂄{capacity}%",
+    "format-alt": "{icon} {time}",
+    "format-full": "󱈑 {capacity}%",
+    "format-icons": [
+      "󱊡",
+      "󱊢",
+      "󱊣"
+    ]
+  },
+  "bluetooth": {
+    "format-on": "󰂯 {status}",
+    "format-off": "󰂲 Off",
+    "format-connected": "󰂱 {device_alias}",
+    "tooltip-format": "{controller_alias}\n{device_enumerate}",
+    "on-click": "blueberry"
+  }
+}

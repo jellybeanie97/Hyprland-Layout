@@ -1,0 +1,31 @@
+;; ==============================
+;; ---- POLLS -------------------
+;; ==============================
+
+;; Time & Date
+(defpoll time :interval "1s" "date '+%H:%M'")
+(defpoll date :interval "1h" "date '+%a, %b %d'")
+(defpoll current_day :interval "1h" "date '+%A'")
+(defpoll current_full_date :interval "1h" "date '+%b %d, %Y'")
+
+;; Visualizer
+(defpoll visualizer_data :interval "0.1s" "bash ~/.config/eww/scripts/visualizer_data.sh")
+
+;; Network
+(defpoll wifi_status :interval "5s" "bash ~/.config/eww/scripts/wifi_status.sh full")
+(defpoll bluetooth_status :interval "5s" "bash ~/.config/eww/scripts/bluetooth_status.sh")
+
+;; Battery
+(defpoll battery_level :interval "10s" "bash ~/.config/eww/scripts/battery_status.sh level")
+(defpoll battery_time :interval "10s" "bash ~/.config/eww/scripts/battery_status.sh time")
+
+;; Audio
+(defpoll volume_level :interval "1s" "bash ~/.config/eww/scripts/volume_status.sh level")
+(defpoll volume_icon :interval "1s" "bash ~/.config/eww/scripts/volume_status.sh icon")
+
+;; Media (Spotify)
+(defpoll spotify_song :interval "1s" "bash ~/.config/eww/scripts/spotify_status.sh song")
+(defpoll spotify_artist :interval "1s" "bash ~/.config/eww/scripts/spotify_status.sh artist")
+
+;; Notifications
+(defpoll notification_count :interval "1s" "bash ~/.config/eww/scripts/notification_count.sh")

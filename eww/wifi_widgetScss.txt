@@ -1,0 +1,30 @@
+.wifi-container {
+    background-color: rgba(0,0,0,0.6);  /* semi-transparent dark */
+    border: 2px solid #ff00ff;           /* neon pink border */
+    border-radius: 12px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 0 15px #ff00ff;
+    transition: all 0.3s ease-in-out;
+}
+
+.wifi-container:hover {
+    box-shadow: 0 0 25px #ff00ff;
+    transform: scale(1.05);
+}
+
+.wifi-ssid {
+    font-family: "Maple Mono";
+    font-size: 14px;
+    color: #00ffff;                     /* neon cyan SSID */
+}
+
+.wifi-signal {
+    width: 80px;
+    height: 6px;
+    border-radius: 6px;
+    background-color: #ff00ff;          /* neon pink bar */
+    transition: width 0.5s ease;
+}

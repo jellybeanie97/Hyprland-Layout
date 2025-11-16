@@ -1,0 +1,55 @@
+/* Fonts */
+* {
+    font-family: "MapleMono Nerd Font", monospace;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ea00d9;
+}
+
+/* Top-level bar */
+#waybar {
+    background-color: rgba(9, 24, 51, 0.95);
+    border-radius: 12px;
+    padding: 6px 12px;
+}
+
+/* Modules */
+#battery,
+#network,
+#clock,
+#custom-applauncher,
+#pulseaudio,
+#bluetooth,
+#tray,
+#hyprland-workspaces,
+#sway-workspaces {
+    background-color: rgba(19, 62, 124, 0.9);
+    margin: 0 6px;
+    padding: 4px 10px;
+    border-radius: 8px;
+    transition: all 150ms ease;
+}
+
+/* Workspaces buttons */
+#hyprland-workspaces button,
+#sway-workspaces button {
+    background: none;
+    border: none;
+    color: #0abdc6;
+    margin: 0 4px;
+    padding: 4px 6px;
+    border-radius: 6px;
+    transition: all 120ms;
+}
+
+/* Clock color */
+#clock {
+    color: #00ffcc;
+}
+
+/* Tray background */
+#tray {
+    background-color: rgba(19, 62, 124, 0.85);
+    border-radius: 8px;
+    padding: 2px 6px;
+}

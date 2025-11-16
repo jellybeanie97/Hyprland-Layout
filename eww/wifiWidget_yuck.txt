@@ -1,0 +1,14 @@
+(defwidget wifi-status
+  :clickable true
+  :on-click "bash ~/.config/eww/scripts/wifi-menu.sh"
+  :geometry (geometry
+    :x "50"
+    :y "20"
+    :width "220"
+    :height "50"
+    :anchor "top right")
+  (container :class "wifi-container"
+    (label :text "$(iwgetid -r)" :class "wifi-ssid")
+    (progress :value "$(nmcli -t -f IN-USE,SSID,SIGNAL dev wifi | grep '*' | cut -d: -f3)" :class "wifi-signal")
+  )
+)

@@ -1,0 +1,99 @@
+* {
+  all: unset;
+  background: transparent;
+  font-family: "JetBrainsMono Nerd Font Mono", "Symbols Nerd Font", monospace;
+}
+
+/* ---- Visualizer ---- */
+.viz-container {
+  background-color: rgba(20, 18, 22, 0.4);
+  border-radius: 15px;
+  padding: 10px;
+  /* `display: flex;` is not a valid Eww property.
+     The layout is now handled in the yuck file. */
+}
+
+.viz-bar {
+  background: linear-gradient(to top, #7da0d3, #bda0ff);
+  border-radius: 6px;
+  margin: 0 2px;
+  min-height: 2px;
+}
+
+.day-label {
+  font-size: 58px;
+  font-weight: bold;
+  color: #bda0ff; /* Matches the top of the gradient in the image */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Adds subtle depth */
+}
+
+.date-label {
+  font-size: 20px;
+  color: #f1b6de; /* Matches the bottom of the gradient in the image */
+  margin-top: -10px;
+}
+
+/* ---- PANEL ---- */
+  // this controls the layout of the panel bar and how it will look
+
+.panel-box {
+  background-color: rgba(28, 132, 192, 0.637);
+  border-radius: 8px;
+  padding: 2px 5px;
+  color: #e4a9e4;
+}
+
+
+  // this controls the icon layout and how it will look
+
+.panel-icon {
+  font-size: 15px;
+  color: #f1b6de;
+  margin: 5px;
+}
+
+  // controls the panel's modules layouts for the icons displayed
+
+.panel-time, 
+.panel-clock, 
+.panel-wifi, 
+.panel-bluetooth, 
+.panel-volume, 
+.panel-battery, 
+.panel-notifications {
+  background-color: #e4a9e4;
+  color: #7641f1;
+  font-weight: bold;
+}
+
+.panel-time {
+  color:aliceblue;
+
+}
+
+.spotify-label {
+  font-size: 14px;
+  font-style: italic;
+  color: #7da0d3;
+}
+/* ---- Wifi Status Widget ---- */
+.wifi-container {
+  background-color: rgba(71, 54, 87, 0.4); /* Consistent dark, transparent background */
+  border: 1px solid #7da0d3; /* Adjusted border color for theming */
+  border-radius: 10px;
+  padding: 5px;
+  min-width: 100px; /* Set a minimum width to prevent collapsing */
+}
+
+.wifi-ssid {
+  font-family: "Maple Mono";
+  font-size: 14px;
+  color: #bda0ff; /* Consistent theme color */
+}
+
+.wifi-signal {
+  border-radius: 5px;
+  /* Use a gradient on the progress bar for a stylized look */
+  background: linear-gradient(to right, #bda0ff, #f1b6de);
+}
+
