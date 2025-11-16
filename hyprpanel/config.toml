@@ -1,0 +1,67 @@
+[panel]
+# Configuration for the main panel and its behavior.
+monitor = 0
+anchor = "top"
+height = 30
+
+width = "100%"
+exclusive = true
+stacking = "top"
+
+[panel.bar]
+# Bar-specific styling and layout.
+position = "top"
+height = 38
+rounding = 12
+padding = 8
+background = "rgba(20, 18, 22, 0.8)"
+foreground = "#f1b6de"
+# *** FONT CHANGE: Replaced "Maple Mono" with the Nerd Font name ***
+font = "JetBrainsMono Nerd Font Mono 11" 
+icon_theme = "Papirus-Dark"
+modules-left = ["launcher", "workspaces"]
+modules-center = ["music"]
+modules-right = ["network", "battery", "clock"]
+
+[panel.modules.launcher]
+# Launcher module configuration.
+type = "launcher"
+# *** ICON CHANGE: Using the popular Linux icon (nf-dev-linux) ***
+icon = " " 
+on-click = "rofi -show drun"
+
+[panel.modules.workspaces]
+# Workspaces module configuration.
+type = "workspaces"
+focused-color = "#7da0d3"
+unfocused-color = "#4c4c6d"
+indicator = true
+# This module typically doesn't need an icon, but I'll use a diamond (nf-fa-diamond) as a placeholder
+icon = " " 
+
+[panel.modules.music]
+# Music module configuration.
+type = "music"
+scrolling = true
+color = "#f1b6de"
+
+[panel.modules.network]
+# Network module configuration.
+type = "network"
+# *** ICON CHANGE: Using the Wi-Fi icon (nf-fa-wifi) ***
+icon-up = " " 
+color = "#a8b6ff"
+
+[panel.modules.battery]
+# Battery module configuration.
+type = "battery"
+# *** ICON CHANGE: Using the full battery icon (nf-fa-battery_full) ***
+icon = " " 
+charging-color = "#a1ffcf"
+discharging-color = "#f1b6de"
+
+[panel.modules.clock]
+# Clock module configuration.
+type = "clock"
+format = "%a %b %d  %I:%M:%S %p"
+color = "#f1b6de"
